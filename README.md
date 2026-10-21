@@ -1,4 +1,4 @@
-# Rep Counter
+# Workout Rep Counter
 
 
 ## Description
