@@ -47,7 +47,7 @@ all tracked activity.
 
 ## To Do
 
-* [ ] generate a full vocabulary library to enable using afplay
+* [ ] generate a full vocabulary library to enable using afplay Amy @ 1.3
 * [ ] replace all "say" commands with afplay
 
 ## References

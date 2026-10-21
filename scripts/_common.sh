@@ -47,6 +47,17 @@ do_rep() {
     sleep $delay
 }
 
+do_vocab_rep() {
+    count=$1
+    delay=$2
+
+    show_count $count
+
+    sleep $delay
+
+    play_vocab $count
+}
+
 show_setup() {
     show_message "Exercise : $1"
     show_message "Rep count: $2"

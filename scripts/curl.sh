@@ -18,7 +18,7 @@ start_countdown
 # loop up
 for ((i = 1; i <= reps; i++))
 do
-    do_rep $i $delay
+    do_vocab_rep $i $delay
 done
 
 afplay /System/Library/Sounds/Ping.aiff &
