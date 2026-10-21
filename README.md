@@ -49,11 +49,14 @@ all tracked activity.
 
 * [ ] generate a full vocabulary library to enable using afplay Amy @ 1.3
 * [ ] replace all "say" commands with afplay
+* [ ] create a sets-app to run n named sets for an exercise with delays specified between reps
+* [ ] create a exercise-app to run named group of set-apps
 * [ ] append results to file
 * [ ] use tput or other tui to write numbers
 * [ ] complete functional specs (clean up with claud)
 * [ ] create bun implementation plan (claud)
 * [ ] generate bun code (claud)
+* [ ] integrate into AI prompt/response to exercise questions
 
 ## References
 
