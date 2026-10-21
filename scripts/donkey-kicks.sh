@@ -17,7 +17,7 @@ start_countdown
 
 for ((i = 1; i <= reps; i++))
 do
-    do_rep $i $delay
+    do_vocab_rep $i $delay
     # TODO: when the set is 1/2 over, switch to other leg
 done
 

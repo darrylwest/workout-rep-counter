@@ -17,7 +17,7 @@ start_countdown
 
 for ((i = 1; i <= reps; i++))
 do
-    do_rep $i $delay
+    do_vocab_rep $i $delay
 done
 
 play_ping
