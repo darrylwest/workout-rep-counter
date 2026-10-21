@@ -3,36 +3,43 @@
 
 ## Description
 
+## Phase 1
 
-## UI Design
+### Command Line
 
-none
+Initially, the application will be run from the command line using something like:
 
-## Database Schema
+`bun run rep-app <exercise_name>`
 
-JSON db?
+This runs a single set of reps for the specified exercise_name.  Results are logged the the database.
 
-SQLite3 DB includes these tables, rep_config and rep_activity, rep_history
+### Reports
+
+Markdown reports are create by reading the activity or history tables.  Reports are launched from the command line.
+
+### Database Schema
+
+SQLite3 DB includes these tables, rep_config and rep_activity
  
-### rep_config
+#### rep_config
 
 Configurations for each exercise
 
-### rep_activity
+#### rep_activity
 
-activity for a single day
+all tracked activity.
 
-### rep_history
+## Phase 2
 
-History of exercise activity, times, counts, etc.
+## UI Design
 
-## Static Web Page
+### Static Web Page
 
 * reads remote json config
 * saves activity in local database store
 * hosted at github pages?
 
-## Web Service
+### Web Service
 
 * reads from server database (sqlite3) ; can convert from static json file
 * writes to server database (sqlite3)
@@ -40,8 +47,8 @@ History of exercise activity, times, counts, etc.
 
 ## References
 
-* [bun programming](https://bun.com/)
-* [piper generator](https://tts.ai/voices/piper/) generate a small vocabulary of numbers, start, stop, etc.; Amy, 1.5x
+* [bun programming](https://bun.com/) the bun language
+* [piper generator](https://tts.ai/voices/piper/) text2voice to .wav (.mp3's don't work with afplay)
 
 ###### 2026.10.21
 
