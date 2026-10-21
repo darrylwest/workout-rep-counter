@@ -9,7 +9,11 @@
 
 set -euo pipefail
 
+VERSION="26.10.21"
+
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+FONT="chunky"
+# FONT="thin"
 
 # DB_PATH="${COMPANION_DB:-$ROOT/data/repcount.db}"
 #
@@ -18,12 +22,12 @@ show_count() {
     i=$1
 
     printf "\a"
-    figlet -f chunky $i
+    figlet -f "$FONT" $i
 }
 
 show_message() {
     msg=$1
-    figlet -f chunky -w 160 $msg
+    figlet -f "$FONT" -w 280 $msg
 }
 
 # replace this with when vocab is complete
@@ -59,9 +63,9 @@ do_vocab_rep() {
 }
 
 show_setup() {
-    show_message "Exercise : $1"
-    show_message "Rep count: $2"
-    show_message "Delay....: $3"
+    show_message "Exercise  : $1"
+    show_message "Rep count : $2"
+    show_message "Delay     : $3"
 
     say "$1, $2 reps"
 
@@ -77,7 +81,7 @@ start_countdown() {
         sleep 1
     done
 
-    figlet -f chunky begin... 
+    figlet -f "$FONT" begin... 
     play_vocab "begin" &
 
     sleep 1
@@ -94,7 +98,6 @@ show_complete() {
     say $name exercise complete
 }
 
-
 log_results() {
     name=$1
     reps=$2
@@ -104,3 +107,5 @@ log_results() {
     
     printf "$now | $reps $name, $delay delay\n"
 }
+
+printf "Rep Counter, Version $VERSION\n"

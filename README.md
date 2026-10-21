@@ -49,6 +49,11 @@ all tracked activity.
 
 * [ ] generate a full vocabulary library to enable using afplay Amy @ 1.3
 * [ ] replace all "say" commands with afplay
+* [ ] append results to file
+* [ ] use tput or other tui to write numbers
+* [ ] complete functional specs (clean up with claud)
+* [ ] create bun implementation plan (claud)
+* [ ] generate bun code (claud)
 
 ## References
 
