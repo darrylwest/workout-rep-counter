@@ -6,7 +6,7 @@
 
 ## UI Design
 
-none for phase 1
+none
 
 ## Database Schema
 
@@ -40,7 +40,8 @@ History of exercise activity, times, counts, etc.
 
 ## References
 
+* [bun programming](https://bun.com/)
 * [piper generator](https://tts.ai/voices/piper/) generate a small vocabulary of numbers, start, stop, etc.; Amy, 1.5x
 
-###### 2026.10.20
+###### 2026.10.21
 
