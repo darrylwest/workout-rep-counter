@@ -26,12 +26,23 @@ show_message() {
     figlet -f chunky -w 160 $msg
 }
 
+# replace this with when vocab is complete
+play() {
+    say $count &
+}
+
+play_vocab() {
+    file="$ROOT/vocabulary/$1.wav"
+
+    afplay $file
+}
+
 do_rep() {
     count=$1
     delay=$2
 
     show_count $count
-    say $count &
+    play $count
 
     sleep $delay
 }
@@ -50,11 +61,13 @@ start_countdown() {
     for ((i = 5; i > 1; i--))
     do
         show_count $i
+        play_vocab $i &
 
         sleep 1
     done
 
     figlet -f chunky begin... 
+    play_vocab "begin" &
 
     sleep 1
 }
