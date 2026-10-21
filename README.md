@@ -45,6 +45,11 @@ all tracked activity.
 * writes to server database (sqlite3)
 * typescript
 
+## To Do
+
+* [ ] generate a full vocabulary library to enable using afplay
+* [ ] replace all "say" commands with afplay
+
 ## References
 
 * [bun programming](https://bun.com/) the bun language
