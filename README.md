@@ -51,9 +51,10 @@ all tracked activity.
 * [ ] replace all "say" commands with afplay
 * [ ] create a sets-app to run n named sets for an exercise with delays specified between reps
 * [ ] create a exercise-app to run named group of set-apps
+* [ ] implement a script to add external events like walking, running, biking, etc.
 * [ ] append results to file
 * [ ] use tput or other tui to write numbers
-* [ ] add random rep tips to help with breathing, muscle concentration, and other rep specific tips (squats: knees behind feet; jkk
+* [ ] add random rep tips to help with breathing, muscle concentration, and other rep specific tips (squats: knees behind feet)
 * [ ] complete functional specs (clean up with claud)
 * [ ] create bun implementation plan (claud)
 * [ ] generate bun code (claud)
