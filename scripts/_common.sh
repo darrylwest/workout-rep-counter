@@ -11,6 +11,18 @@ set -euo pipefail
 
 VERSION="26.10.22"
 
+# context for this set of reps
+declare -A SET_CTX
+SET_CTX[id]=0
+SET_CTX[name]=""
+SET_CTX[sets_target]=0
+SET_CTX[sets_count]=0
+SET_CTX[rep_target]=20
+SET_CTX[rep_delay]=3.8
+SET_CTX[rep_count]=0
+SET_CTX[start_tm]=0
+SET_CTX[end_tm]=0
+
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 FONT="chunky"
 # FONT="thin"
@@ -18,7 +30,13 @@ FONT="chunky"
 # DB_PATH="${COMPANION_DB:-$ROOT/data/repcount.db}"
 #
 
-start_rep() { 
+before_rep() {
+    # do nothing...
+    count=$1
+}
+
+after_rep() {
+    # do nothing...
     count=$1
 }
 
@@ -64,8 +82,8 @@ do_vocab_rep() {
     count=$1
     delay=$2
 
-    # fire a start_rep(count) event
-    start_rep $count
+    # fire a before_rep(count) event
+    before_rep $count
     
     show_count $count
     play_vocab $count
@@ -73,6 +91,7 @@ do_vocab_rep() {
     sleep $delay
 
     # fire a end_rep(count) event
+    after_rep $count
 }
 
 show_setup() {
@@ -116,9 +135,9 @@ log_results() {
     reps=$2
     delay=$3
 
-    now=`date +"%Y-%m-%d %H:%M"`
+    now=`date +"%Y-%m-%d|%H:%M"`
     
-    printf "$now | $reps $name, $delay delay\n"
+    printf "$now|$name|$reps\n"
 }
 
 # printf "Rep Counter, Version $VERSION\n"
