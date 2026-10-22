@@ -9,7 +9,6 @@ set -euo pipefail
 #
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/_common.sh"
 
-
 file=$1
 set_count=3
 sleep_time=120
@@ -22,7 +21,7 @@ for ((i = 1; i <= $set_count; i++))
 do
     say "start set number ${i}.."
 
-    $file
+    $file >> my.log
 
     say "set number ${i} completed.."
     sleep 120

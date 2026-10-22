@@ -8,8 +8,29 @@ set -euo pipefail
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/_common.sh"
 
 name="curls"
-reps="${20:-20}"
-delay="${5:-4.0}"
+reps=20
+delay=3.8
+
+
+# override event
+start_rep() {
+    count=$1
+
+    if ((count == 1))
+    then
+        play_vocab "right"
+    fi
+    if ((count == 11))
+    then
+        play_vocab "left"
+    fi
+
+    if ((count == reps))
+    then
+        play_vocab "last-one"
+    fi
+
+}
 
 show_setup "$name" $reps $delay
 

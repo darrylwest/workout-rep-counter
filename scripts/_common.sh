@@ -18,6 +18,10 @@ FONT="chunky"
 # DB_PATH="${COMPANION_DB:-$ROOT/data/repcount.db}"
 #
 
+start_rep() { 
+    count=$1
+}
+
 show_count() {
     i=$1
 
@@ -46,21 +50,29 @@ do_rep() {
     count=$1
     delay=$2
 
+    # fire a start_rep(count) event
+
     show_count $count
     play $count
 
     sleep $delay
+    
+    # fire a end_rep(count) event
 }
 
 do_vocab_rep() {
     count=$1
     delay=$2
 
+    # fire a start_rep(count) event
+    start_rep $count
+    
     show_count $count
+    play_vocab $count
 
     sleep $delay
 
-    play_vocab $count
+    # fire a end_rep(count) event
 }
 
 show_setup() {
