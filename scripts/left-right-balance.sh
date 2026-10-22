@@ -21,13 +21,7 @@ sleep 1
 
 start_countdown
 
-for ((i = 1; i <= n; i++))
-do
-    echo "$i"
-    say $i &
-    printf "\a"
-    sleep "$delay"
-done
+$ROOT/scripts/left-right-timer.sh -t 600 -l 60 -s R
 
 say exercise set complete
 
