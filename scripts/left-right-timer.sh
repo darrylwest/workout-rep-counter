@@ -184,12 +184,15 @@ while true; do
   fi
   if (( PAUSED && TARGET_PAUSE )); then
     status="✔ TARGET REACHED..."
-    exit 0
   elif (( elapsed >= TARGET )) && [[ -z "$status" ]]; then
     status="Past target — press q to finish"
   fi
 
   draw "$elapsed" "$lap" "$status"
+
+  if (( PAUSED && TARGET_PAUSE )); then
+      exit 0
+  fi
 
   key=""
   rc=0
