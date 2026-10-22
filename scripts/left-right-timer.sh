@@ -26,6 +26,13 @@ TARGET=300
 AUTO_LAP=60
 SIDE="RIGHT"
 
+play_side() {
+    side=`echo $1 | tr '[:upper:]' '[:lower:]'`
+    file="./vocabulary/${side}.wav"
+    printf "$file"
+    afplay $file &
+}
+
 parse_time() {
   local t="$1"
   if [[ "$t" =~ ^([0-9]+):([0-9]{1,2})$ ]]; then
@@ -94,6 +101,13 @@ end_lap() {
   LAP_START=$(now)
   LAP_PAUSED=0
   printf '\a'
+   
+   
+  local elapsed=$(( LAP_START - START - PAUSED_TOTAL ))
+  if (( elapsed < TARGET )); then
+    # Announce the side we just switched TO, e.g. "left" or "right"
+    play_side $SIDE
+  fi
 }
 
 draw() {
@@ -152,6 +166,8 @@ summary() {
 
 tput civis 2>/dev/null   # hide cursor
 stty -echo 2>/dev/null
+
+play_side $SIDE
 
 while true; do
   T=$(now)

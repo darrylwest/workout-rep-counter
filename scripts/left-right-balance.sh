@@ -8,7 +8,7 @@ set -eu
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/_common.sh"
 
 name="right left balance"
-n="${20:-60}"
+reps="${20:-60}"
 delay="${5:-10.0}"
 
 printf "n - $n ; delay - $delay\n"
@@ -23,5 +23,5 @@ start_countdown
 
 $ROOT/scripts/left-right-timer.sh -t 600 -l 60 -s R
 
-say exercise set complete
+say "$name" exercise complete
 
