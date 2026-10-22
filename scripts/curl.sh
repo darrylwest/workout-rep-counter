@@ -12,10 +12,12 @@ reps=20
 delay=3.8
 
 SET_CTX[id]="100"
-SET_CTX[name]="curl"
-SET_CTX[rep_target]=reps
-SET_CTX[rep_delay]=delay
+SET_CTX[name]=$name
+SET_CTX[rep_target]=$reps
+SET_CTX[rep_delay]=$delay
 SET_CTX[rep_count]=0
+
+# logx_set
 
 # override event
 start_rep() {
@@ -36,7 +38,6 @@ SET_CTX[start_tm]=`date +"%s"`
 
 for ((i = 1; i <= reps; i++))
 do
-    SET_CTX[rep_count]=i
     do_vocab_rep $i $delay
 done
 
@@ -47,4 +48,5 @@ afplay /System/Library/Sounds/Ping.aiff &
 say $name exercise complete
 
 log_results "$name" $reps $delay
+logx_set
 

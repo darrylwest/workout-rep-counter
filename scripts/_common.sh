@@ -82,6 +82,8 @@ do_vocab_rep() {
     count=$1
     delay=$2
 
+    SET_CTX[rep_count]=$count
+
     # fire a before_rep(count) event
     before_rep $count
     
@@ -138,6 +140,20 @@ log_results() {
     now=`date +"%Y-%m-%d|%H:%M"`
     
     printf "$now|$name|$reps\n"
+}
+
+logx_set() {
+    for f in id name rep_target rep_delay rep_count start_tm end_tm
+    do
+        printf "$f=${SET_CTX[$f]},"
+    done
+
+    st=${SET_CTX[start_tm]}
+    et=${SET_CTX[end_tm]}
+
+    elapsed=$((et - st))
+
+    printf "seconds=$elapsed\n"
 }
 
 # printf "Rep Counter, Version $VERSION\n"
