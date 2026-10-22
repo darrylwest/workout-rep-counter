@@ -48,8 +48,9 @@ all tracked activity.
 ## To Do
 
 * [x] generate a full vocabulary library to enable using afplay Amy @ 1.3
-* [ ] replace all "say" commands with afplay
-* [ ] create a sets-app to run n named sets for an exercise with delays specified between reps
+* [x] replace all "say" commands with afplay
+* [x] create a sets-app to run n named sets for an exercise with delays specified between reps
+* [ ] replace all printf and terminal outputs with a write to socket or file to enable visual feedback from multiple viewers
 * [ ] create a exercise-app to run named group of set-apps
 * [ ] implement a script to add external events like walking, running, biking, etc.
 * [ ] append results to file
@@ -68,5 +69,5 @@ all tracked activity.
 * [piper generator](https://tts.ai/voices/piper/) text2voice to .wav (.mp3's don't work with afplay)
 * [mac speech to text](https://github.com/ljh-sh/maclisten)
 
-###### 2026.10.21
+###### 2026.10.22
 

@@ -9,7 +9,7 @@
 
 set -euo pipefail
 
-VERSION="26.10.21"
+VERSION="26.10.22"
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 FONT="chunky"
@@ -21,7 +21,8 @@ FONT="chunky"
 show_count() {
     i=$1
 
-    printf "\a"
+    afplay /System/Library/Sounds/Tink.aiff &
+
     figlet -f "$FONT" $i
 }
 
@@ -94,7 +95,7 @@ play_ping() {
 show_complete() {
     name=$1
 
-    afplay /System/Library/Sounds/Ping.aiff &
+    play_ping
     say $name exercise complete
 }
 
@@ -108,4 +109,4 @@ log_results() {
     printf "$now | $reps $name, $delay delay\n"
 }
 
-printf "Rep Counter, Version $VERSION\n"
+# printf "Rep Counter, Version $VERSION\n"

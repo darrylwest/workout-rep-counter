@@ -8,8 +8,8 @@ set -eu
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/_common.sh"
 
 name="lunge"
-reps="${20:-20}"
-delay="${5:-3.6}"
+reps="20"
+delay="3.8"
 
 show_setup "$name" $reps $delay
 
