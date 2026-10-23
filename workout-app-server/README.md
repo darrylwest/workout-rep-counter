@@ -12,6 +12,23 @@ Outputs are also sent to logs and the workout database.
 
 ## Block Diagram
 
+## REST API Endpoint Spec
+
+* GET /workouts - return all active workout records
+* GET /workout id - return the specified workout details
+* POST /workout id - start the workout specified by id
+* DELETE /workout - set a workout's status as archived
+* GET /set_configs - return all active set config records
+* GET /set_config id - return the set_config
+* POST /set_config attrs - insert a new configuration
+* GET /workout_set - return the latest workout set_results
+* POST /workout_set id - insert a new workout_set and start the workout session; return the id or error if a session is in process
+* GET /status - ready, running set id, set name
+* GET /health - uptime, current status, other stats
+
+### API Use Case Examples
+
+
 ## Database
 
 ### DB Schema
@@ -28,14 +45,16 @@ Attributes:
 * name string - the key name used for endpoints
 * set_list string - a list of set_config ids for this workout session
 * notes string - ad hoc
+* difficulty int - 0 to 5 where 0 = extremely easy, 5 = extremely difficult, 3 = average
 * last_run datetime - the last time this workout was used
+* total_runs int - the total number of times this workout has been used
 * status string - active, inactive, archived
 
 #### set_config
 
 Configurations for a single set, e.g., curl, crunch, pushup, etc
 
-Attributes
+Attributes:
 
 * id string - unique identifier (txkey)
 * date_created datetime - millis
@@ -51,17 +70,17 @@ Attributes
 * notes string - how to configure, lists of videos for tips on how to use
 * status string - active, inactive, archive
 
-#### set_results
+#### workout_set
 
 Workout details for each set of reps updated in real time.  When a set is run either descretely or in a group of sets, a record
 is created to 
 
-Attributes
+Attributes:
 
 * id string - unique set identifier used by endpoints
 * date_created datetime - millis
 * last_updated datetime - millis
-* set_id string - points to the set_config entry
+* set_config_id string - points to the set_config entry
 * set_name string - the short name
 * rep_target int - copied from current config
 * rep_delay double - copied from current config
@@ -72,4 +91,5 @@ Attributes
 * status string - active, complete
 
 
-###### 2026.10.22
+###### 2026.10.22 | dpw
+
