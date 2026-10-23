@@ -11,6 +11,12 @@ name="push ups"
 reps="${20:-15}"
 delay="${5:-3.5}"
 
+SET_CTX[id]="101"
+SET_CTX[name]=$name
+SET_CTX[rep_target]=$reps
+SET_CTX[rep_delay]=$delay
+SET_CTX[rep_count]=0
+
 show_setup "$name" $reps $delay
 
 start_countdown
@@ -26,3 +32,4 @@ play_ping
 say $name exercise complete
 
 log_results "$name" $reps $delay
+logx_set
