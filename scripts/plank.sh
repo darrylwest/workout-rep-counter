@@ -41,7 +41,7 @@ run_plank_set() {
         t=$((i * 10))
 
         say "$t seconds" &
-        show_message $t
+        show_message "$t seconds"
 
         # TODO : use the real time to determine the next required sleep time
     }
