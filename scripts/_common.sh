@@ -136,18 +136,52 @@ show_complete() {
     say $name set complete
 }
 
+write_log() {
+    dt=`date +"%Y-%m-activity"`
+    filename="$ROOT/logs/${dt}.log"
+    day=`date +"%d"`
+
+    (
+        printf "day=${day}, "
+        for f in id name rep_target rep_delay rep_count start_tm end_tm
+        do
+            printf "$f=${SET_CTX[$f]}, "
+        done
+
+        st=${SET_CTX[start_tm]}
+        et=${SET_CTX[end_tm]}
+
+        elapsed=$((et - st))
+
+        printf "seconds=$elapsed\n"
+    ) >> $filename
+}
+
+write_markdown() {
+
+    dt=`date +"%Y-%m-activity"`
+    filename="$ROOT/logs/${dt}.md"
+    day=`date +"%d"`
+
+    (
+        printf "|${day}"
+        for f in id name rep_target rep_delay rep_count start_tm end_tm
+        do
+            printf "|${SET_CTX[$f]}"
+        done
+
+        st=${SET_CTX[start_tm]}
+        et=${SET_CTX[end_tm]}
+
+        elapsed=$((et - st))
+
+        printf "|$elapsed|\n"
+    ) >> $filename
+}
+
 log_set_results() {
-    for f in id name rep_target rep_delay rep_count start_tm end_tm
-    do
-        printf "$f=${SET_CTX[$f]}, "
-    done
-
-    st=${SET_CTX[start_tm]}
-    et=${SET_CTX[end_tm]}
-
-    elapsed=$((et - st))
-
-    printf "seconds=$elapsed\n"
+    write_log
+    write_markdown
 }
 
 set_complete() {
