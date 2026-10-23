@@ -7,45 +7,15 @@ set -euo pipefail
 
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/_common.sh"
 
-name="sit ups"
-reps=15
-delay=3.8
-
 SET_CTX[id]=`txkey`
-SET_CTX[name]=$name
-SET_CTX[rep_target]=$reps
-SET_CTX[rep_delay]=$delay
+SET_CTX[name]="sit ups"
+SET_CTX[sets_target]=1
+SET_CTX[sets_delay]=120
+SET_CTX[sets_count]=0
+SET_CTX[rep_target]=${1:-15} # override the rep target with cmd arg[1]
+SET_CTX[rep_delay]=3.8
 SET_CTX[rep_count]=0
 
-# logx_set
+# if the set number is passed in, then set it
 
-# override event
-before_rep() {
-    count=$1
-
-    if ((count == reps))
-    then
-        play_vocab "last-one"
-    fi
-}
-
-show_setup "$name" $reps $delay
-
-start_countdown
-
-# loop up
-SET_CTX[start_tm]=`date +"%s"`
-
-for ((i = 1; i <= reps; i++))
-do
-    do_vocab_rep $i $delay
-done
-
-SET_CTX[end_tm]=`date +"%s"`
-
-play_ping
-say $name exercise complete
-
-log_results "$name" $reps $delay
-logx_set
-
+run_set
