@@ -8,8 +8,8 @@ set -euo pipefail
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/_common.sh"
 
 name="right left balance"
-reps="${20:-60}"
-delay="${5:-10.0}"
+reps="${1:-60}"
+delay="${2:-10.0}"
 
 printf "n - $reps ; delay - $delay\n"
 
