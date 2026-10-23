@@ -7,26 +7,15 @@ set -euo pipefail
 
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/_common.sh"
 
-name="bird dogs"
-reps="${20:-30}"
-delay="${5:-3.0}"
-
 SET_CTX[id]=`txkey`
-SET_CTX[name]=$name
-SET_CTX[rep_target]=$reps
-SET_CTX[rep_delay]=$delay
+SET_CTX[name]="bird dogs"
+SET_CTX[sets_target]=1
+SET_CTX[sets_delay]=120
+SET_CTX[sets_count]=0
+SET_CTX[rep_target]=${1:-30} # override the rep target with cmd arg[1]
+SET_CTX[rep_delay]=3.0
 SET_CTX[rep_count]=0
 
-show_setup "$name" $reps $delay
+# if the set number is passed in, then set it
 
-start_countdown
-
-before_set
-
-for ((i = 1; i <= reps; i++))
-do
-    do_vocab_rep $i $delay
-    # TODO: when the set is 1/2 over, switch to other leg
-done
-
-set_complete
+run_set
