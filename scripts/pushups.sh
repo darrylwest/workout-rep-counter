@@ -11,7 +11,7 @@ name="push ups"
 reps="${20:-15}"
 delay="${5:-3.5}"
 
-SET_CTX[id]="101"
+SET_CTX[id]=`txkey`
 SET_CTX[name]=$name
 SET_CTX[rep_target]=$reps
 SET_CTX[rep_delay]=$delay
