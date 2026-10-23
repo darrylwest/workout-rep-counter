@@ -16,7 +16,7 @@ Outputs are also sent to logs and the workout database.
 
 * GET /workouts - return all active workout records
 * GET /workout id - return the specified workout details
-* POST /workout id - start the workout specified by id
+* POST /workout id - start a new workout specified by id as the spec
 * DELETE /workout - set a workout's status as archived
 * GET /set_configs - return all active set config records
 * GET /set_config id - return the set_config
