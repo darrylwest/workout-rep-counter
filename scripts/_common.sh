@@ -36,18 +36,22 @@ now() {
     date +"%s"
 }
 
-before_set() {
+set_start_time() {
     SET_CTX[start_tm]=$(now)
+}
+
+before_set() {
+    set_start_time
 }
 
 before_rep() {
     # do nothing...
-    count=$1
+    zzz=1
 }
 
 after_rep() {
     # do nothing...
-    count=$1
+    zzz=1
 }
 
 show_count() {
