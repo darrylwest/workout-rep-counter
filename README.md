@@ -50,7 +50,8 @@ all tracked activity.
 * [x] generate a full vocabulary library to enable using afplay Amy @ 1.3
 * [x] replace all "say" commands with afplay
 * [x] create a sets-app to run n named sets for an exercise with delays specified between reps
-* [ ] create a config/context struct to hold exercise id, name, target rep count, actual rep count, rep delay, set count, set start time, set end time, 
+* [x] create a config/context struct to hold exercise id, name, target rep count, actual rep count, rep delay, set count, set start time, set end time, 
+* [ ] refactor for new commons
 * [ ] create workout-app-service block diagram and functional spec
 * [ ] replace all printf and terminal outputs with a write to socket or file to enable visual feedback from multiple viewers
 * [ ] create a exercise-app to run named group of set-apps

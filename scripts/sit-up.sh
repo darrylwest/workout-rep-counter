@@ -11,7 +11,7 @@ name="sit ups"
 reps=15
 delay=3.8
 
-SET_CTX[id]="100"
+SET_CTX[id]=`txkey`
 SET_CTX[name]=$name
 SET_CTX[rep_target]=$reps
 SET_CTX[rep_delay]=$delay
@@ -43,8 +43,7 @@ done
 
 SET_CTX[end_tm]=`date +"%s"`
 
-afplay /System/Library/Sounds/Ping.aiff &
-
+play_ping
 say $name exercise complete
 
 log_results "$name" $reps $delay
