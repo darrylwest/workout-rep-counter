@@ -82,20 +82,6 @@ do_rep() {
     count=$1
     delay=$2
 
-    # fire a start_rep(count) event
-
-    show_count $count
-    play $count
-
-    sleep $delay
-    
-    # fire a end_rep(count) event
-}
-
-do_vocab_rep() {
-    count=$1
-    delay=$2
-
     SET_CTX[rep_count]=$count
 
     # fire a before_rep(count) event
@@ -184,7 +170,7 @@ run_set() {
     # loop up
     for ((i = 1; i <= reps; i++))
     do
-        do_vocab_rep $i $delay
+        do_rep $i $delay
     done
 
     set_complete
