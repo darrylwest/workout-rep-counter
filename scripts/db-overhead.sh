@@ -7,22 +7,15 @@ set -eu
 
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/_common.sh"
 
-name="dumbbell overhead"
-reps="${20:-20}"
-delay="${5:-3.2}"
+SET_CTX[id]=`txkey`
+SET_CTX[name]="dumbell overhead"
+SET_CTX[sets_target]=1
+SET_CTX[sets_delay]=120
+SET_CTX[sets_count]=0
+SET_CTX[rep_target]=20
+SET_CTX[rep_delay]=3.2
+SET_CTX[rep_count]=0
 
-show_setup "$name" $reps $delay
+# if the set number is passed in, then set it
 
-start_countdown
-
-for ((i = 1; i <= reps; i++))
-do
-    do_vocab_rep $i $delay
-done
-
-play_ping
-
-say $name exercise complete
-
-log_results "$name" $reps $delay
-
+run_set
