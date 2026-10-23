@@ -13,7 +13,7 @@ SET_CTX[sets_target]=1
 SET_CTX[sets_delay]=120
 SET_CTX[sets_count]=0
 SET_CTX[rep_target]=${1:-1} # override the rep target with cmd arg[1]
-SET_CTX[rep_delay]=10
+SET_CTX[rep_delay]=90
 SET_CTX[rep_count]=0
 
 # if the set number is passed in, then set it
@@ -22,8 +22,12 @@ SET_CTX[rep_count]=0
 run_plank_set() {
     reps=${SET_CTX[rep_target]}
     delay=${SET_CTX[rep_delay]}
+    name=${SET_CTX[name]}
 
-    show_setup
+    show_message "Exercise : $name"
+    say "$name"
+    sleep 2
+
     start_countdown
 
     set_start_time
