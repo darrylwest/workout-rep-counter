@@ -28,16 +28,21 @@ run_plank_set() {
 
     set_start_time
 
-    sleep_time=9
+    # just a guess...
+    sleep_time=9.6
 
     for ((i == 1; i <= 9; i++)) {
         sleep $sleep_time
 
         t=$((i * 10))
 
-        show_message $t
         say "$t seconds" &
+        show_message $t
+
+        # TODO : use the real time to determine the next required sleep time
     }
+
+    sleep 1.5
 
     set_complete
 }
