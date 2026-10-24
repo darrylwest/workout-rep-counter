@@ -23,7 +23,7 @@ run_script() {
         $f || true
 
         printf "Rest a minute or two: `date +%T`\n"
-        sleep 10
+        sleep 10 || true
 
         if (( $i < 3 ))
         then
