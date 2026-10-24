@@ -3,7 +3,7 @@
 # 2026-10-21 18:21:25
 #
 
-set -eu
+set -euo pipefail
 
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/_common.sh"
 

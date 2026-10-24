@@ -1,0 +1,84 @@
+#!/usr/bin/env bash
+# dpw@tiburon.local
+# 2026-10-24 16:07:02
+#
+
+set -euo pipefail
+
+
+# create a list of scripts
+# prompt to 1) run, 2) skip
+# run 3 sets for each script, prompting between each
+# show timeer between sets
+#
+ 
+scripts="scripts/db-squats.sh scripts/floor-press-up.sh scripts/db-bent-over-rows.sh scripts/db-calf-raises.sh scripts/db-overhead.sh scripts/hip-thrust.sh scripts/curl.sh"
+alternates="scripts/db-arm-lifts.sh scripts/db-one-arm-pull.sh scripts/lunge.sh scripts/pushups.sh scripts/sit-up.sh"
+
+show_sets() {
+    printf "Workout List: $scripts\n"
+}
+
+run_script() {
+    script=$1
+
+    for ((i = 1; i <= 3; i++))
+    do
+        printf "Running $script, set: $i\n"
+
+        ( 
+            $f
+        )
+
+        printf "Rest a minute or two: `date +%T`\n"
+        sleep 10
+
+        if (( $i < 3 ))
+        then
+            read -r -p "[R]un $script set, or [S]kip? " response
+
+            case "${response,,}" in
+              s|skip)
+                echo "Skipping $f\n"
+                break
+                ;;
+              *)
+                printf "ok...\n"
+                ;;
+            esac
+        fi
+    done
+
+    clear
+}
+
+for f in $scripts
+do
+    clear
+
+    show_sets
+    printf "\n**** Script: $f ****\n"
+    while true
+    do
+        # show the day's progress so far
+        read -r -p "[R]un $f or [S]kip? or [E]xit: " response
+
+        case "${response,,}" in
+          r|run)
+            run_script $f
+            break
+            ;;
+          s|skip)
+            echo "Skipping $f\n"
+            break
+            ;;
+          e|exit)
+            echo "bye\n"
+            exit 0
+            ;;
+          *)
+            echo "Invalid choice: '$response', please try again..."
+            ;;
+        esac
+    done
+done
