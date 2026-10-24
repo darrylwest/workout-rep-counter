@@ -5,15 +5,8 @@
 
 set -euo pipefail
 
-
-# create a list of scripts
-# prompt to 1) run, 2) skip
-# run 3 sets for each script, prompting between each
-# show timeer between sets
-#
- 
-scripts="scripts/db-squats.sh scripts/floor-press-up.sh scripts/db-bent-over-rows.sh scripts/db-calf-raises.sh scripts/db-overhead.sh scripts/hip-thrust.sh scripts/curl.sh"
-alternates="scripts/db-arm-lifts.sh scripts/db-one-arm-pull.sh scripts/lunge.sh scripts/pushups.sh scripts/sit-up.sh"
+scripts="scripts/db-squats.sh scripts/floor-press-up.sh scripts/db-bent-over-rows.sh scripts/db-calf-raises.sh scripts/db-overhead.sh scripts/hip-thrust.sh"
+alternates="scripts/db-arm-lifts.sh scripts/db-one-arm-pull.sh scripts/lunge.sh scripts/pushups.sh scripts/sit-up.sh scripts/curl.sh"
 
 show_sets() {
     printf "Workout List: $scripts\n"
