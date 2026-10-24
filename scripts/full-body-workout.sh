@@ -19,9 +19,8 @@ run_script() {
     do
         printf "Running $script, set: $i\n"
 
-        ( 
-            $f
-        )
+        ## alway return true to enable query quit on ctrl-c
+        $f || true
 
         printf "Rest a minute or two: `date +%T`\n"
         sleep 10
@@ -44,6 +43,23 @@ run_script() {
 
     clear
 }
+
+query_quit() {
+    printf "\n\n"
+    read -r -p "[C]continue or [E]xit: " response
+    
+    case "${response,,}" in
+        e|exit)
+            printf "\nbye bye!\n"
+            exit 130
+            ;;
+        *)
+            printf "continue...\n"
+            ;;
+    esac
+}
+
+trap query_quit INT
 
 for f in $scripts
 do
