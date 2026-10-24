@@ -2,9 +2,9 @@
 
 ### 1. Full-Body Strength Routine (Mon / Wed / Fri)
 
-*Perform 2–3 sets of 8–12 reps per exercise. Rest 60–90 seconds between sets.*
+*Perform 3 sets of 20 to 30 reps per exercise. Rest 120 seconds between sets.*
 
-1. **Goblet Squat or Box Squat:** Hold one 20 lb dumbbell vertically at your chest. Squat down to a chair or bench, driving through your heels to stand. *(Quads, Glutes)*
+1. **Goblet Squat or Sumo Squat:** Hold one 20 lb dumbbell vertically at your chest. Squat down to a chair or bench, driving through your heels to stand. *(Quads, Glutes)*
 2. **Dumbbell Floor Press:** Lie on your back on the floor, holding both 20 lb dumbbells. Press straight up from chest height. *(Chest, Triceps, Front Shoulders)*
 3. **Bent-Over Dumbbell Rows:** Hinge at the hips with a flat back, pulling both 20 lb dumbbells toward your hips. *(Upper Back, Lats, Biceps)*
 4. **Weighted Calf Raises:** Wear your 8 lb ankle weights and hold one or both 20 lb dumbbells at your sides. Raise up onto your toes, pause at the top, and lower slowly. *(Calves, Lower Legs)*
@@ -50,5 +50,12 @@
 * **Progressive Load Management:** Your 20 lb dumbbells are solid for compound movements (squats, rows, presses). If 20 lbs feels too heavy for lateral raises or overhead presses, perform those movements with bodyweight or light resistance, focusing on strict form.
 * **Warm-Up:** Spend 5 minutes before every strength session doing light mobility work (arm circles, torso twists, gentle marching in place).
 * **Hydration & Safety:** Keep water handy and perform balance exercises near a wall or sturdy chair so support is always within reach.
+
+## References
+
+* [Goblet and Sumo Squats](https://www.youtube.com/shorts/-tea8IlIR60)
+* [Dumbbell Floor Press](https://www.youtube.com/shorts/UBmpZ7l5Nlk)
+* [Dumbbell Bentover Row](https://www.youtube.com/watch?v=fFmwY2dA2ds)
+* [Glute Bridge & Hip Thrust](https://www.youtube.com/shorts/ZRJEvfjIdy4)
 
 ###### 2026-10-24 | dpw
