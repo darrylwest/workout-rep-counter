@@ -35,16 +35,18 @@ Outputs are also sent to logs and the workout database.
 
 #### workout_config
 
-Lists the sets to be used for an entire workout session.
+Reference lists of sets to be used for an entire workout session.  For example a _full body
+workout_ would include legs, quads, sit ups, crunches, curls, lunges.  A _core_ workout 
+might include sit ups, crunches, planks, pushups, lunges.
 
 Attributes:
 
-* id string - txkey
-* date_created datetime - millis
-* last_updated datetime - millis
-* name string - the key name used for endpoints
-* set_list string - a list of set_config ids for this workout session
-* notes string - ad hoc
+* id string - txkey _(e.g. **8D5CptznxOhl** a 12 character unique, time-based, sortable key)_
+* date_created int - unix timestamp
+* last_updated int - unix timestamp
+* name string - the name of this workout, e.g., full body, easy, legs, upper body, stretching
+* set_list string - a comma separated list of set_config ids for this workout session
+* notes string - ad hoc notes
 * difficulty int - 0 to 5 where 0 = extremely easy, 5 = extremely difficult, 3 = average
 * last_run datetime - the last time this workout was used
 * total_runs int - the total number of times this workout has been used
@@ -57,38 +59,37 @@ Configurations for a single set, e.g., curl, crunch, pushup, etc
 Attributes:
 
 * id string - unique identifier (txkey)
-* date_created datetime - millis
-* last_updated datetime - millis
-* name string (no spaces) - the key name used for endpoints
-* long_name string - the display name
+* date_created int - unix timestamp
+* last_updated int - unix timestamp
+* name string - the name of this set, e.g., curls, situps, dumbbell overhead press
 * target_reps int
 * rep_delay double
-* target_sets int
-* set_delay double
+* target_sets int - defaults to 3 sets
+* set_delay int - defaults to 180 (3 minutes)
 * difficulty int - 0 to 5 where 0 = extremely easy, 5 = extremely difficult, 3 = average
 * muscle_group string - describes the muscles that this rep exercises
 * notes string - how to configure, lists of videos for tips on how to use
-* status string - active, inactive, archive
+* status string - active, inactive, archived
 
-#### workout_set
+#### workout_activity
 
-Workout details for each set of reps updated in real time.  When a set is run either descretely or in a group of sets, a record
-is created to 
+Workout details for each set of reps updated in real time.  Each time a set is run to completion, 
+either descretely or in a group of sets, a record is created to log the activity 
 
 Attributes:
 
 * id string - unique set identifier used by endpoints
-* date_created datetime - millis
-* last_updated datetime - millis
+* date_created int - unix timestamp
+* last_updated int - unix timestamp
 * set_config_id string - points to the set_config entry
 * set_name string - the short name
 * rep_target int - copied from current config
 * rep_delay double - copied from current config
 * set_number int - the current set number, or 0 if this was run outside of a workout session
 * workout_id string - the id of the workout or empty string if not running in a session
-* start_tm datetime - millis
-* end_tm datetime - millis
-* status string - active, complete
+* start_tm int - unix timestamp
+* end_tm int - unix timestamp
+* status string - active, completed, aborted
 
-###### 2026.10.22 | dpw
+###### 2026.10.23 | dpw
 
