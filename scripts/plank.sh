@@ -12,7 +12,7 @@ SET_CTX[name]="90 second planks"
 SET_CTX[sets_target]=1
 SET_CTX[sets_delay]=120
 SET_CTX[sets_count]=0
-SET_CTX[rep_target]=${1:-1} # override the rep target with cmd arg[1]
+SET_CTX[rep_target]=1
 SET_CTX[rep_delay]=90
 SET_CTX[rep_count]=0
 
