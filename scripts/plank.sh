@@ -12,8 +12,8 @@ SET_CTX[name]="plank"
 SET_CTX[sets_target]=1
 SET_CTX[sets_delay]=120
 SET_CTX[sets_count]=0
-SET_CTX[rep_target]=12
-SET_CTX[rep_delay]=5
+SET_CTX[rep_target]=1
+SET_CTX[rep_delay]=60
 SET_CTX[rep_count]=0
 
 say "hold plank until set is complete..."
