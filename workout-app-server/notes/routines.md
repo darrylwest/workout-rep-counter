@@ -71,5 +71,6 @@
 * [Weighted Calf Raises](https://www.youtube.com/watch?v=hPA98_r-6e4)
 * [Glute Bridge & Hip Thrust](https://www.youtube.com/shorts/ZRJEvfjIdy4)
 * [Dumbbell Curls](https://www.youtube.com/shorts/VCw_uIxW8WE)
+* [Mobility](https://www.youtube.com/watch?v=bVHcd_BRPYM) side planks, down dog press, etc.
 
 ###### 2026-10-24 | dpw
