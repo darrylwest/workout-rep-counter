@@ -22,6 +22,7 @@
 
 ### 2. Core & Low-Impact Balance Routine
 
+#### Routine 1
 *Perform 2–3 rounds of the following flow. Focus on control, stability, and steady breathing.*
 
 * **Plank:** Hold for 60-90 seconds with a straight body line. Modulate difficulty by placing hands on an elevated surface like a bench or sofa if needed. *(Deep Core, Anti-Extension)*
@@ -29,6 +30,10 @@
 * **Bird-Dogs (With or Without Ankle Weights):** On all fours, extend opposite arm and leg simultaneously until parallel with the floor. Pause for 2 seconds at the top. Perform 8–10 reps per side. *(Lower Back, Core, Glutes)*
 * **Dead Bugs:** Lie on your back with knees at 90 degrees and arms straight up. Slowly lower opposite arm and leg toward the floor without arching your lower back. Perform 8–10 reps per side. *(Lower Abdominals)*
 * **Single-Leg Balance Stand:** Stand on one foot with soft knee bend for 30 seconds per side. Add toe taps forward and backward to increase challenge. *(Proprioception, Ankle/Hip Stabilizers)*
+
+#### Routine 2
+
+* more stuff...
 
 ---
 
