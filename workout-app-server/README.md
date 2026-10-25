@@ -14,6 +14,8 @@ Outputs are also sent to logs and the workout database.
 
 ## REST API Endpoint Spec
 
+**Consider replacing this with RPC**
+
 * GET /workouts - return all active workout records
 * GET /workout id - return the specified workout details
 * POST /workout id - start a new workout specified by id as the spec
@@ -21,15 +23,20 @@ Outputs are also sent to logs and the workout database.
 * GET /set_configs - return all active set config records
 * GET /set_config id - return the set_config
 * POST /set_config attrs - insert a new configuration
-* GET /workout_set - return the latest workout set_results
-* POST /workout_set id - insert a new workout_set and start the workout session; return the id or error if a session is in process
+* GET /workout_activity - returns a list of workout_activity records (latest day)
 * GET /status - ready, running set id, set name
 * GET /health - uptime, current status, other stats
 
+Notes:
+
+* all returned data is in JSON format
+* all POST/PUT data is in JSON format
+
 ### API Use Case Examples
 
-
 ## Database
+
+SQLite3
 
 ### DB Schema
 
@@ -91,5 +98,5 @@ Attributes:
 * end_tm int - unix timestamp
 * status string - active, completed, aborted
 
-###### 2026.10.23 | dpw
+###### 2026.10.24 | dpw
 
