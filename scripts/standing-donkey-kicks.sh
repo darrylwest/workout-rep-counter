@@ -17,6 +17,21 @@ SET_CTX[rep_delay]=4.2
 SET_CTX[rep_count]=0
 
 # if the set number is passed in, then set it
+# override event
+before_rep() {
+    count=$1
+    target=${SET_CTX[rep_target]}
+
+    half_count=$(( target / 2 + 1 ))
+
+    if ((count == half_count))
+    then
+        play_vocab "switch-to-left"
+        sleep 1
+    fi
+}
+
+play_vocab "switch-to-right"
 
 run_set
 

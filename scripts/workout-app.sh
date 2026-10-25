@@ -12,7 +12,7 @@ core1="plank side-plank reverse-plank side-plank sit-up crunch"
 core2="plank tip-toe-hold bird-dogs dead-bugs sit-up crunch crab-press donkey-kicks"
 upperbody=""
 lowerbody="leg-raise"
-mobility="plank bird-dogs down-dog-press reverse-plank deep-squat standing-donkey-keys"
+mobility="plank bird-dogs down-dog-press reverse-plank deep-squat standing-donkey-kicks"
 
 workout=$mobility
 

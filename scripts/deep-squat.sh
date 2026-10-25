@@ -12,8 +12,8 @@ SET_CTX[name]="deep squats"
 SET_CTX[sets_target]=1
 SET_CTX[sets_delay]=120
 SET_CTX[sets_count]=0
-SET_CTX[rep_target]=10
-SET_CTX[rep_delay]=10
+SET_CTX[rep_target]=6
+SET_CTX[rep_delay]=15
 SET_CTX[rep_count]=0
 
 # if the set number is passed in, then set it

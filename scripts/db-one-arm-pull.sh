@@ -19,8 +19,9 @@ SET_CTX[rep_count]=0
 # override event
 before_rep() {
     count=$1
+    target=${SET_CTX[rep_target]}
 
-    half_count=$(( reps / 2 + 1 ))
+    half_count=$(( target / 2 + 1 ))
 
     if ((count == half_count))
     then
