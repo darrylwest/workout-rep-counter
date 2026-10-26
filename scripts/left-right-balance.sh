@@ -25,5 +25,8 @@ start_countdown
 
 $ROOT/scripts/left-right-timer.sh -t 600 -l 60 -s R
 
+# log the results?
+
 say "$name" exercise complete
+
 
