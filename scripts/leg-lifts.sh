@@ -17,5 +17,7 @@ SET_CTX[rep_delay]=3.5
 SET_CTX[rep_count]=0
 
 # if the set number is passed in, then set it
+#
+# can do scissors or reverse crunch
 
 run_set

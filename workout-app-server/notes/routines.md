@@ -72,5 +72,6 @@
 * [Glute Bridge & Hip Thrust](https://www.youtube.com/shorts/ZRJEvfjIdy4)
 * [Dumbbell Curls](https://www.youtube.com/shorts/VCw_uIxW8WE)
 * [Mobility](https://www.youtube.com/watch?v=bVHcd_BRPYM) side planks, down dog press, etc.
+* [Core](https://www.youtube.com/watch?v=x33O9qGN_us)
 
-###### 2026-10-24 | dpw
+###### 2026-10-25 | dpw
