@@ -16,7 +16,7 @@ mobility="plank bird-dogs down-dog-press reverse-plank deep-squat standing-donke
 
 # dead-bugs
 
-workout=$core1
+workout=$core2
 
 scipt_list="fullbody1 upperbody core1 fullbody2 core2 lowerbody mobility"
 
