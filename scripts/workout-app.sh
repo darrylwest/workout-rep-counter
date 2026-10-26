@@ -8,7 +8,7 @@ set -euo pipefail
 
 fullbody1="db-squats floor-press-up db-bent-over-rows db-calf-raises db-overhead hip-thrust"
 fullbody2="db-squats db-arm-lifts hip-thrust db-one-arm-pull lunge pushups sit-up curl"
-core1="90-second-plank side-plank reverse-plank side-plank sit-up crunch single-leg-raise"
+core1="90-second-plank side-plank reverse-plank sit-up crunch single-leg-raise"
 core2="90-second-plank tip-toe-hold bird-dogs sit-up crunch crab-press donkey-kicks leg-lifts"
 upperbody=""
 lowerbody="leg-raise"

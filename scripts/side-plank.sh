@@ -18,7 +18,7 @@ SET_CTX[rep_count]=0
 
 # if the set number is passed in, then set it
 
-SIDE="RIGHT"
+SIDE="right"
 
 # re-implement run set to fix the iterator
 run_plank_set() {
@@ -27,7 +27,7 @@ run_plank_set() {
     name=${SET_CTX[name]}
 
     show_message "Exercise : $name" # say which side...
-    say "$name"
+    say "$name, $SIDE side"
     sleep 2
 
     start_countdown
@@ -56,5 +56,9 @@ run_plank_set() {
 # start on left side
 run_plank_set
 # switch to right
-# slepp 5
-# run_plank_set
+SIDE="left"
+say "switch to the $SIDE side."
+sleep 10
+
+run_plank_set
+
