@@ -60,7 +60,7 @@ run_script() {
 query_quit() {
     printf "\n\n"
     read -r -p "[C]continue or [E]xit: " response
-    E
+
     case "${response,,}" in
         e|exit)
             printf "\nbye bye!\n"
@@ -102,12 +102,16 @@ do
             echo "Invalid choice: '$response', please try again..."
             ;;
         esac
+
+        END_TIME=`date +"%s"`
+        elapsed=$(( END_TIME - START_TIME ))
+        printf "\nElapsed time: $elapsed seconds, $(( elapsed / 60 )) minutes...\n"
     done
 done
 
 END_TIME=`date +"%s"`
 elapsed=$(( END_TIME - START_TIME ))
 
-printf "\n\nSets: $workout, $elapsed total seconds, $(( elapsed / 60 )) minutes..."
+printf "\n\nSets: $workout, $elapsed total seconds, $(( elapsed / 60 )) minutes...\n"
 say "Workout session completed"
 
