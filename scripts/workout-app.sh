@@ -8,13 +8,13 @@ set -euo pipefail
 
 fullbody1="db-squats floor-press-up db-bent-over-rows db-calf-raises db-overhead hip-thrust"
 fullbody2="db-squats db-arm-lifts hip-thrust db-one-arm-pull lunge pushups sit-up curl"
-core1="plank side-plank reverse-plank side-plank sit-up crunch"
-core2="plank tip-toe-hold bird-dogs dead-bugs sit-up crunch crab-press donkey-kicks"
+core1="90-second-plank side-plank reverse-plank side-plank sit-up crunch leg-lifts"
+core2="90-second-plank tip-toe-hold bird-dogs sit-up crunch crab-press donkey-kicks"
 upperbody=""
 lowerbody="leg-raise"
 mobility="plank bird-dogs down-dog-press reverse-plank deep-squat standing-donkey-kicks"
 
-workout=$mobility
+workout=$core1
 
 scipt_list="fullbody1 upperbody core1 fullbody2 core2 lowerbody mobility"
 
