@@ -24,6 +24,7 @@ show_sets() {
     printf "Workout List: $workout\n"
 }
 
+START_TIME=`date +"%s"`
 run_script() {
     script=$1
 
@@ -59,7 +60,7 @@ run_script() {
 query_quit() {
     printf "\n\n"
     read -r -p "[C]continue or [E]xit: " response
-    
+    E
     case "${response,,}" in
         e|exit)
             printf "\nbye bye!\n"
@@ -103,4 +104,10 @@ do
         esac
     done
 done
+
+END_TIME=`date +"%s"`
+elapsed=$(( END_TIME - START_TIME ))
+
+printf "\n\nSets: $workout, $elapsed total seconds, $(( elapsed / 60 )) minutes..."
+say "Workout session completed"
 
