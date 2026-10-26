@@ -9,16 +9,24 @@ set -euo pipefail
 fullbody1="db-squats floor-press-up db-bent-over-rows db-calf-raises db-overhead hip-thrust"
 fullbody2="db-squats db-arm-lifts hip-thrust db-one-arm-pull lunge pushups sit-up curl"
 core1="90-second-plank side-plank reverse-plank sit-up crunch single-leg-raise"
-core2="90-second-plank tip-toe-hold bird-dogs sit-up crunch crab-press donkey-kicks leg-lifts"
+core2="90-second-plank tip-toe-hold bird-dogs sit-up crunch donkey-kicks leg-lifts"
 upperbody=""
 lowerbody="leg-raise"
 mobility="plank bird-dogs down-dog-press reverse-plank deep-squat standing-donkey-kicks"
 
-# dead-bugs
+# dead-bugs crab-press 
 
+workout_name="core2"
 workout=$core2
+start_tm=`date +"%s"`
 
 scipt_list="fullbody1 upperbody core1 fullbody2 core2 lowerbody mobility"
+
+show_session_time() {
+    now=`date +"%s"`
+    elapsed=$(( now - start_tm ))
+    printf "Session Time: $(( elapsed )) seconds, $(( elapsed / 60 )) minutes\n"
+}
 
 show_sets() {
     printf "Workout List: $workout\n"
@@ -78,6 +86,7 @@ for f in $workout
 do
     clear
 
+    show_session_time
     show_sets
     printf "\n**** Script: $f ****\n"
     while true
