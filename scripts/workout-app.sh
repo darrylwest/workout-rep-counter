@@ -14,6 +14,8 @@ upperbody=""
 lowerbody="leg-raise"
 mobility="plank bird-dogs down-dog-press reverse-plank deep-squat standing-donkey-kicks"
 
+# dead-bugs
+
 workout=$core1
 
 scipt_list="fullbody1 upperbody core1 fullbody2 core2 lowerbody mobility"

@@ -13,10 +13,12 @@ SET_CTX[sets_target]=1
 SET_CTX[sets_delay]=120
 SET_CTX[sets_count]=0
 SET_CTX[rep_target]=1
-SET_CTX[rep_delay]=30
+SET_CTX[rep_delay]=40
 SET_CTX[rep_count]=0
 
 # if the set number is passed in, then set it
+
+SIDE="RIGHT"
 
 # re-implement run set to fix the iterator
 run_plank_set() {
@@ -24,7 +26,7 @@ run_plank_set() {
     delay=${SET_CTX[rep_delay]}
     name=${SET_CTX[name]}
 
-    show_message "Exercise : $name"
+    show_message "Exercise : $name" # say which side...
     say "$name"
     sleep 2
 
@@ -35,7 +37,7 @@ run_plank_set() {
     # just a guess...
     sleep_time=9.6
 
-    for ((i == 1; i <= 9; i++)) {
+    for ((i == 1; i <= 4; i++)) {
         sleep $sleep_time
 
         t=$((i * 10))
@@ -51,5 +53,8 @@ run_plank_set() {
     set_complete
 }
 
+# start on left side
 run_plank_set
-
+# switch to right
+# slepp 5
+# run_plank_set
