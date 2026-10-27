@@ -31,6 +31,7 @@ Notes:
 
 * all returned data is in JSON format
 * all POST/PUT data is in JSON format
+* bun / hono / sqlite3 tech stack
 
 ### API Use Case Examples
 
