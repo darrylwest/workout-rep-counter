@@ -11,7 +11,7 @@ source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/_common.sh"
 
 file=$1
 set_count=3
-sleep_time=120
+sleep_time=240
 
 set_started=`date +"%s"
 
@@ -21,10 +21,10 @@ for ((i = 1; i <= $set_count; i++))
 do
     say "start set number ${i}.."
 
-    $file >> my.log
+    $file
 
     say "set number ${i} completed.."
-    sleep 120
+    sleep $sleep_time
 done
 
 set_ended=`date +"%s"
