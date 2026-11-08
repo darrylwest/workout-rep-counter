@@ -17,8 +17,8 @@ mobility="plank bird-dogs down-dog-press reverse-plank deep-squat standing-donke
 
 # dead-bugs crab-press 
 
-workout_name="core3"
-workout=$core3
+workout_name="fullbody"
+workout=$fullbody1
 start_tm=`date +"%s"`
 
 scipt_list="fullbody1 upperbody core1 fullbody2 core2 lowerbody mobility"

@@ -11,6 +11,15 @@ name="right left balance"
 reps="${1:-60}"
 delay="${2:-10.0}"
 
+SET_CTX[id]=`txkey`
+SET_CTX[name]=$name
+SET_CTX[sets_target]=1
+SET_CTX[sets_delay]=$delay
+SET_CTX[sets_count]=0
+SET_CTX[rep_target]=$reps
+SET_CTX[rep_delay]=0
+SET_CTX[rep_count]=0
+
 printf "n - $reps ; delay - $delay\n"
 
 sleep 1
@@ -20,6 +29,7 @@ say "prepare for $name exercise"
 sleep 2
 
 start_countdown
+before_set
 
 # enable an iteration callback fired each 1 second
 
@@ -29,4 +39,4 @@ $ROOT/scripts/left-right-timer.sh -t 600 -l 60 -s R
 
 say "$name" exercise complete
 
-
+set_complete
